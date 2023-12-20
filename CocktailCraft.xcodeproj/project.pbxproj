@@ -9,21 +9,46 @@
 /* Begin PBXBuildFile section */
 		3CD188422B31F36500AB7F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188412B31F36500AB7F3A /* AppDelegate.swift */; };
 		3CD188442B31F36500AB7F3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188432B31F36500AB7F3A /* SceneDelegate.swift */; };
-		3CD188462B31F36500AB7F3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188452B31F36500AB7F3A /* ViewController.swift */; };
-		3CD188492B31F36500AB7F3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD188472B31F36500AB7F3A /* Main.storyboard */; };
+		3CD188462B31F36500AB7F3A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188452B31F36500AB7F3A /* ListViewController.swift */; };
 		3CD1884B2B31F36600AB7F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1884A2B31F36600AB7F3A /* Assets.xcassets */; };
 		3CD1884E2B31F36600AB7F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1884C2B31F36600AB7F3A /* LaunchScreen.storyboard */; };
+		3CD1885D2B31F96300AB7F3A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1885C2B31F96300AB7F3A /* NetworkManager.swift */; };
+		3CD1885F2B31FC8100AB7F3A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1885E2B31FC8100AB7F3A /* Cocktail.swift */; };
+		3CD188642B32176000AB7F3A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188632B32176000AB7F3A /* TabBarController.swift */; };
+		3CD188662B321A4800AB7F3A /* CocktailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188652B321A4800AB7F3A /* CocktailCell.swift */; };
+		3CD188692B321A9D00AB7F3A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CD188682B321A9D00AB7F3A /* SnapKit */; };
+		3CD1886B2B323A1600AB7F3A /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1886A2B323A1600AB7F3A /* ListPresenter.swift */; };
+		3CD1886E2B323DC900AB7F3A /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1886D2B323DC900AB7F3A /* ListCoordinator.swift */; };
+		3CD188712B323E2B00AB7F3A /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188702B323E2B00AB7F3A /* ModuleBuilder.swift */; };
+		3CD188762B33053700AB7F3A /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188752B33053700AB7F3A /* TabBarCoordinator.swift */; };
+		3CD188782B33187200AB7F3A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188772B33187200AB7F3A /* DetailsViewController.swift */; };
+		3CD1887E2B33244D00AB7F3A /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1887D2B33244D00AB7F3A /* DetailsPresenter.swift */; };
+		3CD188842B332A7900AB7F3A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188832B332A7900AB7F3A /* FavoritesViewController.swift */; };
+		3CD188862B332B2200AB7F3A /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188852B332B2200AB7F3A /* FavoritesCoordinator.swift */; };
+		3CD188892B332E5A00AB7F3A /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188882B332E5A00AB7F3A /* FavoritesPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3CD1883E2B31F36500AB7F3A /* CocktailCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD188412B31F36500AB7F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CD188432B31F36500AB7F3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3CD188452B31F36500AB7F3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3CD188482B31F36500AB7F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CD188452B31F36500AB7F3A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		3CD1884A2B31F36600AB7F3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CD1884D2B31F36600AB7F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CD1884F2B31F36600AB7F3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CD1885C2B31F96300AB7F3A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3CD1885E2B31FC8100AB7F3A /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		3CD188632B32176000AB7F3A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3CD188652B321A4800AB7F3A /* CocktailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailCell.swift; sourceTree = "<group>"; };
+		3CD1886A2B323A1600AB7F3A /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		3CD1886D2B323DC900AB7F3A /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
+		3CD188702B323E2B00AB7F3A /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		3CD188752B33053700AB7F3A /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		3CD188772B33187200AB7F3A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3CD1887D2B33244D00AB7F3A /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		3CD188832B332A7900AB7F3A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		3CD188852B332B2200AB7F3A /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
+		3CD188882B332E5A00AB7F3A /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD188692B321A9D00AB7F3A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +82,187 @@
 		3CD188402B31F36500AB7F3A /* CocktailCraft */ = {
 			isa = PBXGroup;
 			children = (
-				3CD188412B31F36500AB7F3A /* AppDelegate.swift */,
-				3CD188432B31F36500AB7F3A /* SceneDelegate.swift */,
-				3CD188452B31F36500AB7F3A /* ViewController.swift */,
-				3CD188472B31F36500AB7F3A /* Main.storyboard */,
-				3CD1884A2B31F36600AB7F3A /* Assets.xcassets */,
-				3CD1884C2B31F36600AB7F3A /* LaunchScreen.storyboard */,
+				3CD1886F2B323E1A00AB7F3A /* ModuleBuilder */,
+				3CD1886C2B323DB800AB7F3A /* Coordinator */,
+				3CD1885B2B31F93800AB7F3A /* Services */,
+				3CD188562B31F8F700AB7F3A /* App */,
+				3CD188572B31F90000AB7F3A /* Modules */,
+				3CD188552B31F8F000AB7F3A /* Resources */,
 				3CD1884F2B31F36600AB7F3A /* Info.plist */,
 			);
 			path = CocktailCraft;
+			sourceTree = "<group>";
+		};
+		3CD188552B31F8F000AB7F3A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3CD1884A2B31F36600AB7F3A /* Assets.xcassets */,
+				3CD1884C2B31F36600AB7F3A /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3CD188562B31F8F700AB7F3A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188412B31F36500AB7F3A /* AppDelegate.swift */,
+				3CD188432B31F36500AB7F3A /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3CD188572B31F90000AB7F3A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188622B32172900AB7F3A /* TabBarController */,
+				3CD188612B32171800AB7F3A /* List */,
+				3CD188792B33187600AB7F3A /* Details */,
+				3CD1887F2B3329A200AB7F3A /* Favorites */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3CD188582B31F90A00AB7F3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CD1885E2B31FC8100AB7F3A /* Cocktail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CD188592B31F91300AB7F3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188602B32156D00AB7F3A /* Cell */,
+				3CD188452B31F36500AB7F3A /* ListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3CD1885A2B31F91C00AB7F3A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3CD1886A2B323A1600AB7F3A /* ListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3CD1885B2B31F93800AB7F3A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3CD1885C2B31F96300AB7F3A /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3CD188602B32156D00AB7F3A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188652B321A4800AB7F3A /* CocktailCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3CD188612B32171800AB7F3A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188582B31F90A00AB7F3A /* Model */,
+				3CD188592B31F91300AB7F3A /* View */,
+				3CD1885A2B31F91C00AB7F3A /* Presenter */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		3CD188622B32172900AB7F3A /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188632B32176000AB7F3A /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		3CD1886C2B323DB800AB7F3A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3CD1886D2B323DC900AB7F3A /* ListCoordinator.swift */,
+				3CD188752B33053700AB7F3A /* TabBarCoordinator.swift */,
+				3CD188852B332B2200AB7F3A /* FavoritesCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3CD1886F2B323E1A00AB7F3A /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188702B323E2B00AB7F3A /* ModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		3CD188792B33187600AB7F3A /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				3CD1887C2B33188C00AB7F3A /* Presenter */,
+				3CD1887B2B33188700AB7F3A /* View */,
+				3CD1887A2B33187E00AB7F3A /* Model */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		3CD1887A2B33187E00AB7F3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CD1887B2B33188700AB7F3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188772B33187200AB7F3A /* DetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3CD1887C2B33188C00AB7F3A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3CD1887D2B33244D00AB7F3A /* DetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3CD1887F2B3329A200AB7F3A /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188822B3329BE00AB7F3A /* Presenter */,
+				3CD188812B3329B900AB7F3A /* Model */,
+				3CD188802B3329B300AB7F3A /* View */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		3CD188802B3329B300AB7F3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188832B332A7900AB7F3A /* FavoritesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3CD188812B3329B900AB7F3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CD188822B3329BE00AB7F3A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3CD188882B332E5A00AB7F3A /* FavoritesPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +281,9 @@
 			dependencies = (
 			);
 			name = CocktailCraft;
+			packageProductDependencies = (
+				3CD188682B321A9D00AB7F3A /* SnapKit */,
+			);
 			productName = CocktailCraft;
 			productReference = 3CD1883E2B31F36500AB7F3A /* CocktailCraft.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +312,9 @@
 				Base,
 			);
 			mainGroup = 3CD188352B31F36500AB7F3A;
+			packageReferences = (
+				3CD188672B321A9D00AB7F3A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 3CD1883F2B31F36500AB7F3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +331,6 @@
 			files = (
 				3CD1884E2B31F36600AB7F3A /* LaunchScreen.storyboard in Resources */,
 				3CD1884B2B31F36600AB7F3A /* Assets.xcassets in Resources */,
-				3CD188492B31F36500AB7F3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +341,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CD188462B31F36500AB7F3A /* ViewController.swift in Sources */,
+				3CD1885D2B31F96300AB7F3A /* NetworkManager.swift in Sources */,
+				3CD188662B321A4800AB7F3A /* CocktailCell.swift in Sources */,
+				3CD188842B332A7900AB7F3A /* FavoritesViewController.swift in Sources */,
+				3CD1886B2B323A1600AB7F3A /* ListPresenter.swift in Sources */,
+				3CD188862B332B2200AB7F3A /* FavoritesCoordinator.swift in Sources */,
+				3CD188712B323E2B00AB7F3A /* ModuleBuilder.swift in Sources */,
+				3CD188462B31F36500AB7F3A /* ListViewController.swift in Sources */,
 				3CD188422B31F36500AB7F3A /* AppDelegate.swift in Sources */,
+				3CD188762B33053700AB7F3A /* TabBarCoordinator.swift in Sources */,
+				3CD188642B32176000AB7F3A /* TabBarController.swift in Sources */,
+				3CD1886E2B323DC900AB7F3A /* ListCoordinator.swift in Sources */,
+				3CD1887E2B33244D00AB7F3A /* DetailsPresenter.swift in Sources */,
+				3CD1885F2B31FC8100AB7F3A /* Cocktail.swift in Sources */,
 				3CD188442B31F36500AB7F3A /* SceneDelegate.swift in Sources */,
+				3CD188892B332E5A00AB7F3A /* FavoritesPresenter.swift in Sources */,
+				3CD188782B33187200AB7F3A /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3CD188472B31F36500AB7F3A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CD188482B31F36500AB7F3A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3CD1884C2B31F36600AB7F3A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +500,6 @@
 				INFOPLIST_FILE = CocktailCraft/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +527,6 @@
 				INFOPLIST_FILE = CocktailCraft/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +564,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3CD188672B321A9D00AB7F3A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3CD188682B321A9D00AB7F3A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CD188672B321A9D00AB7F3A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3CD188362B31F36500AB7F3A /* Project object */;
 }
