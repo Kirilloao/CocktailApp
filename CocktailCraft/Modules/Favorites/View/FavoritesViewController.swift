@@ -7,21 +7,43 @@
 
 import UIKit
 
-protocol FavoritesViewControllerProtocol {
+protocol FavoritesViewControllerProtocol: AnyObject {
     func showCocktails()
 }
 
 final class FavoritesViewController: UITableViewController {
     
+    // MARK: - Presenter
+    var presenter: FavoritesPresenterProtocol!
+    
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Favorites"
+        addObserver()
+        setViews()
         registerCell()
+        tableView.rowHeight = 70
+        tableView.separatorStyle = .none
     }
     
     // MARK: - Private Methods
+    private func addObserver() {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("Saved"), object: nil, queue: nil) { _ in
+            self.presenter.fetchCoctails()
+            self.tableView.reloadData()
+        }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("Deleted"), object: nil, queue: nil) { _ in
+            self.presenter.fetchCoctails()
+            self.tableView.reloadData()
+        }
+    }
+    
+    private func setViews() {
+        view.backgroundColor = .white
+        title = "Favorites"
+    }
+    
     private func registerCell() {
         tableView.register(CocktailCell.self, forCellReuseIdentifier: CocktailCell.reuseID)
     }
@@ -31,8 +53,9 @@ final class FavoritesViewController: UITableViewController {
 extension FavoritesViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        presenter.cocktails.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
             let cell = tableView.dequeueReusableCell(
@@ -42,6 +65,10 @@ extension FavoritesViewController {
         else {
             return UITableViewCell()
         }
+        
+        let cocktail = presenter.cocktails[indexPath.row]
+        cell.configure(with: cocktail)
+        cell.selectionStyle = .none
         
         return cell
     }

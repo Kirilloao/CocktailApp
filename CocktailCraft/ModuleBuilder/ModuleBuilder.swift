@@ -34,10 +34,9 @@ final class ModuleBuilder: ModuleBuilderProtocol {
     
     func createFavoritesModule(with coordinator: FavoriteCoordinatorProtocol) -> UIViewController {
         let view = FavoritesViewController()
+        let presenter = FavoritePresenter(view: view, coordinator: coordinator)
+        view.presenter = presenter
         return view
-        
-        
-//        let presenter
     }
     
 }

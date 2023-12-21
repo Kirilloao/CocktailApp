@@ -14,7 +14,6 @@
 		3CD1884E2B31F36600AB7F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1884C2B31F36600AB7F3A /* LaunchScreen.storyboard */; };
 		3CD1885D2B31F96300AB7F3A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1885C2B31F96300AB7F3A /* NetworkManager.swift */; };
 		3CD1885F2B31FC8100AB7F3A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1885E2B31FC8100AB7F3A /* Cocktail.swift */; };
-		3CD188642B32176000AB7F3A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188632B32176000AB7F3A /* TabBarController.swift */; };
 		3CD188662B321A4800AB7F3A /* CocktailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188652B321A4800AB7F3A /* CocktailCell.swift */; };
 		3CD188692B321A9D00AB7F3A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CD188682B321A9D00AB7F3A /* SnapKit */; };
 		3CD1886B2B323A1600AB7F3A /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1886A2B323A1600AB7F3A /* ListPresenter.swift */; };
@@ -26,6 +25,9 @@
 		3CD188842B332A7900AB7F3A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188832B332A7900AB7F3A /* FavoritesViewController.swift */; };
 		3CD188862B332B2200AB7F3A /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188852B332B2200AB7F3A /* FavoritesCoordinator.swift */; };
 		3CD188892B332E5A00AB7F3A /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD188882B332E5A00AB7F3A /* FavoritesPresenter.swift */; };
+		3CD1888C2B33350700AB7F3A /* CocktailData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1888A2B33350700AB7F3A /* CocktailData.xcdatamodeld */; };
+		3CD1888E2B333BDC00AB7F3A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1888D2B333BDC00AB7F3A /* StorageManager.swift */; };
+		3CD188902B337E8D00AB7F3A /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1888F2B337E8D00AB7F3A /* ImageStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +40,6 @@
 		3CD1884F2B31F36600AB7F3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CD1885C2B31F96300AB7F3A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3CD1885E2B31FC8100AB7F3A /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
-		3CD188632B32176000AB7F3A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3CD188652B321A4800AB7F3A /* CocktailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailCell.swift; sourceTree = "<group>"; };
 		3CD1886A2B323A1600AB7F3A /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		3CD1886D2B323DC900AB7F3A /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		3CD188832B332A7900AB7F3A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		3CD188852B332B2200AB7F3A /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
 		3CD188882B332E5A00AB7F3A /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		3CD1888B2B33350700AB7F3A /* CocktailData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CocktailData.xcdatamodel; sourceTree = "<group>"; };
+		3CD1888D2B333BDC00AB7F3A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		3CD1888F2B337E8D00AB7F3A /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		3CD188552B31F8F000AB7F3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CD1888A2B33350700AB7F3A /* CocktailData.xcdatamodeld */,
 				3CD1884A2B31F36600AB7F3A /* Assets.xcassets */,
 				3CD1884C2B31F36600AB7F3A /* LaunchScreen.storyboard */,
 			);
@@ -114,7 +119,6 @@
 		3CD188572B31F90000AB7F3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				3CD188622B32172900AB7F3A /* TabBarController */,
 				3CD188612B32171800AB7F3A /* List */,
 				3CD188792B33187600AB7F3A /* Details */,
 				3CD1887F2B3329A200AB7F3A /* Favorites */,
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				3CD1885C2B31F96300AB7F3A /* NetworkManager.swift */,
+				3CD1888D2B333BDC00AB7F3A /* StorageManager.swift */,
+				3CD1888F2B337E8D00AB7F3A /* ImageStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -171,14 +177,6 @@
 				3CD1885A2B31F91C00AB7F3A /* Presenter */,
 			);
 			path = List;
-			sourceTree = "<group>";
-		};
-		3CD188622B32172900AB7F3A /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				3CD188632B32176000AB7F3A /* TabBarController.swift */,
-			);
-			path = TabBarController;
 			sourceTree = "<group>";
 		};
 		3CD1886C2B323DB800AB7F3A /* Coordinator */ = {
@@ -344,13 +342,15 @@
 				3CD1885D2B31F96300AB7F3A /* NetworkManager.swift in Sources */,
 				3CD188662B321A4800AB7F3A /* CocktailCell.swift in Sources */,
 				3CD188842B332A7900AB7F3A /* FavoritesViewController.swift in Sources */,
+				3CD1888E2B333BDC00AB7F3A /* StorageManager.swift in Sources */,
 				3CD1886B2B323A1600AB7F3A /* ListPresenter.swift in Sources */,
 				3CD188862B332B2200AB7F3A /* FavoritesCoordinator.swift in Sources */,
 				3CD188712B323E2B00AB7F3A /* ModuleBuilder.swift in Sources */,
+				3CD188902B337E8D00AB7F3A /* ImageStorage.swift in Sources */,
 				3CD188462B31F36500AB7F3A /* ListViewController.swift in Sources */,
 				3CD188422B31F36500AB7F3A /* AppDelegate.swift in Sources */,
 				3CD188762B33053700AB7F3A /* TabBarCoordinator.swift in Sources */,
-				3CD188642B32176000AB7F3A /* TabBarController.swift in Sources */,
+				3CD1888C2B33350700AB7F3A /* CocktailData.xcdatamodeld in Sources */,
 				3CD1886E2B323DC900AB7F3A /* ListCoordinator.swift in Sources */,
 				3CD1887E2B33244D00AB7F3A /* DetailsPresenter.swift in Sources */,
 				3CD1885F2B31FC8100AB7F3A /* Cocktail.swift in Sources */,
@@ -583,6 +583,19 @@
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		3CD1888A2B33350700AB7F3A /* CocktailData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3CD1888B2B33350700AB7F3A /* CocktailData.xcdatamodel */,
+			);
+			currentVersion = 3CD1888B2B33350700AB7F3A /* CocktailData.xcdatamodel */;
+			path = CocktailData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3CD188362B31F36500AB7F3A /* Project object */;
 }

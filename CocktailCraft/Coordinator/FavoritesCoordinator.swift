@@ -24,6 +24,9 @@ final class FavoriteCoordinator: FavoriteCoordinatorProtocol {
     }
     
     func start() {
+        let favoriteVC = moduleBuilder.createFavoritesModule(with: self)
+        favoriteVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        navigationController.pushViewController(favoriteVC, animated: false)
     }
     
     func showDetails(with cocktail: Cocktail) {

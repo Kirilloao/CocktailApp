@@ -27,6 +27,8 @@ final class ListViewController: UITableViewController {
         super.viewDidLoad()
         setupSearchController()
         registerCell()
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 70
     }
     
     // MARK: - Private Methods
@@ -61,6 +63,7 @@ extension ListViewController {
         
         let cocktail = presenter.cocktails[indexPath.row]
         cell.configure(with: cocktail)
+        cell.selectionStyle = .none
         
         return cell
     }
@@ -69,6 +72,7 @@ extension ListViewController {
 // MARK: - UITableViewDelegate
 extension ListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let cocktail = presenter.cocktails[indexPath.row]
         presenter.cocktailDidTapped(with: cocktail)
     }
@@ -86,8 +90,8 @@ extension ListViewController: UISearchResultsUpdating {
 // MARK: - UISearchBarDelegate
 extension ListViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//        presenter.cocktails = []
-//        tableView.reloadData()
+        //        presenter.cocktails = []
+        //        tableView.reloadData()
     }
 }
 
