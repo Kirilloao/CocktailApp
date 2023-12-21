@@ -17,7 +17,7 @@ protocol DetailsPresenterProtocol: AnyObject {
 
 // MARK: - DetailsPresenter
 final class DetailsPresenter: DetailsPresenterProtocol {
-
+    
     var isFavorite = false
     
     private unowned var view: DetailsViewControllerProtocol
@@ -27,20 +27,7 @@ final class DetailsPresenter: DetailsPresenterProtocol {
     init(view: DetailsViewControllerProtocol, cocktail: Cocktail) {
         self.view = view
         self.cocktail = cocktail
-        
-        storageManager.fetchCocktails { result in
-            switch result {
-                
-            case .success(let data):
-                data.forEach { cocktailData in
-                    if cocktailData.name == cocktail.name {
-                        isFavorite = true
-                    }
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
+        checkCocktail()
     }
     
     func showCocktail() {
@@ -56,6 +43,21 @@ final class DetailsPresenter: DetailsPresenterProtocol {
             storageManager.deleteCocktail(with: cocktail.name)
             NotificationCenter.default.post(name: NSNotification.Name("Deleted"), object: nil)
             
+        }
+    }
+    
+    private func checkCocktail() {
+        storageManager.fetchCocktails { result in
+            switch result {
+            case .success(let data):
+                data.forEach { cocktailData in
+                    if cocktailData.name == cocktail.name {
+                        isFavorite = true
+                    }
+                }
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }

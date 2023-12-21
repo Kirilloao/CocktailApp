@@ -18,24 +18,23 @@ final class DetailsViewController: UIViewController {
     
     // MARK: - Private UI Properties
     private lazy var nameLabel: UILabel = {
-        var label = UILabel()
-        label.text = "Recipe Name"
-        label.font = UIFont.boldSystemFont(ofSize: 18)
-        
+        var label = UILabel.makeLabel(
+            with: "Recipe Name",
+            font: .boldSystemFont(ofSize: 18)
+        )
         return label
     }()
     
     private lazy var ingredientsView: UIView = {
-        var view = UIView()
-        view.backgroundColor = UIColor(red: 0.78, green: 0.93, blue: 0.93, alpha: 1.00)
-        view.layer.cornerRadius = 10
+        var view = UIView.makeMainView()
         return view
     }()
     
     private lazy var ingredientLabel: UILabel = {
-        var label = UILabel()
-        label.text = "Ingredients"
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        var label = UILabel.makeLabel(
+            with: "ingredients",
+            font: .boldSystemFont(ofSize: 15)
+        )
         return label
     }()
     
@@ -46,16 +45,15 @@ final class DetailsViewController: UIViewController {
     }()
     
     private lazy var instructionLabel: UILabel = {
-        var label = UILabel()
-        label.text = "Instruction"
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        var label = UILabel.makeLabel(
+            with: "Instruction",
+            font: .boldSystemFont(ofSize: 15)
+        )
         return label
     }()
     
     private lazy var instructionView: UIView = {
-        var view = UIView()
-        view.backgroundColor = UIColor(red: 0.78, green: 0.93, blue: 0.93, alpha: 1.00)
-        view.layer.cornerRadius = 10
+        var view = UIView.makeMainView()
         return view
     }()
     
@@ -72,30 +70,24 @@ final class DetailsViewController: UIViewController {
         setupNavigationBar()
         setupConstraints()
         presenter?.showCocktail()
-        if presenter?.isFavorite == true {
-            navigationItem.rightBarButtonItem?.tintColor = .systemYellow
-            print("YELLOW")
-        } else {
-            navigationItem.rightBarButtonItem?.tintColor = .systemGray
-            print("GRAY")
-        }
-        
+        setFavoriteButton()
     }
     
     // MARK: - Private Actions
     @objc private func favoriteButtonDidTapped() {
         presenter?.favoriteButtonDidTapped()
-        
-        if presenter?.isFavorite == true {
-            navigationItem.rightBarButtonItem?.tintColor = .systemYellow
-            print("YELLOW")
-        } else {
-            navigationItem.rightBarButtonItem?.tintColor = .systemGray
-            print("GRAY")
-        }
+        setFavoriteButton()
     }
     
     // MARK: - Private Methods
+    private func setFavoriteButton() {
+        if presenter?.isFavorite == true {
+            navigationItem.rightBarButtonItem?.tintColor = .systemYellow
+        } else {
+            navigationItem.rightBarButtonItem?.tintColor = .systemGray
+        }
+    }
+    
     private func setViews() {
         view.backgroundColor = .white
         view.addSubview(nameLabel)

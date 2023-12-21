@@ -30,7 +30,10 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
         let favoritesCoordinator = FavoriteCoordinator(navigationController: UINavigationController())
         favoritesCoordinator.start()
         
-        tabBarController.viewControllers = [listCoordinator.navigationController, favoritesCoordinator.navigationController]
+        tabBarController.viewControllers = [
+            listCoordinator.navigationController,
+            favoritesCoordinator.navigationController
+        ]
     }
 }
 

@@ -16,11 +16,15 @@ protocol ModuleBuilderProtocol {
 
 // MARK: - ModuleBuilder
 final class ModuleBuilder: ModuleBuilderProtocol {
-
+    
     func createListModule(with coordinator: ListCoordinatorProtocol) -> UIViewController {
         let view = ListViewController()
         let networkManager = NetworkManager()
-        let presenter = ListPresenter(view: view, networkManager: networkManager, coordinator: coordinator)
+        let presenter = ListPresenter(
+            view: view,
+            networkManager: networkManager,
+            coordinator: coordinator
+        )
         view.presenter = presenter
         return view
     }
@@ -38,5 +42,4 @@ final class ModuleBuilder: ModuleBuilderProtocol {
         view.presenter = presenter
         return view
     }
-    
 }

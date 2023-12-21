@@ -33,7 +33,9 @@ final class FavoritePresenter: FavoritesPresenterProtocol {
         storageManager.fetchCocktails { result in
             if case .success(let cocktails) = result {
                 self.cocktails = cocktails
+                self.view.showCocktails()
             }
+            
         }
     }
 }

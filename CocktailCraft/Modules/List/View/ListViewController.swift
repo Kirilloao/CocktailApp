@@ -27,8 +27,7 @@ final class ListViewController: UITableViewController {
         super.viewDidLoad()
         setupSearchController()
         registerCell()
-        tableView.separatorStyle = .none
-        tableView.rowHeight = 70
+        setupTableView()
     }
     
     // MARK: - Private Methods
@@ -44,6 +43,11 @@ final class ListViewController: UITableViewController {
     
     private func registerCell() {
         tableView.register(CocktailCell.self, forCellReuseIdentifier: CocktailCell.reuseID)
+    }
+    
+    private func setupTableView() {
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 70
     }
 }
 

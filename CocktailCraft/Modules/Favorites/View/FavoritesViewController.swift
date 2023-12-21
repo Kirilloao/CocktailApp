@@ -19,24 +19,30 @@ final class FavoritesViewController: UITableViewController {
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        addObserver()
         setViews()
         registerCell()
-        tableView.rowHeight = 70
-        tableView.separatorStyle = .none
+        setupTableView()
+        addObserver()
+    }
+    
+    private func configureTableHeaderView() {
+
     }
     
     // MARK: - Private Methods
     private func addObserver() {
-        NotificationCenter.default.addObserver(forName: NSNotification.Name("Saved"), object: nil, queue: nil) { _ in
-            self.presenter.fetchCoctails()
-            self.tableView.reloadData()
+        let notificationNames = [NSNotification.Name("Saved"), NSNotification.Name("Deleted")]
+        for name in notificationNames {
+            NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil) { [weak self] _ in
+                self?.presenter.fetchCoctails()
+            }
         }
-        
-        NotificationCenter.default.addObserver(forName: NSNotification.Name("Deleted"), object: nil, queue: nil) { _ in
-            self.presenter.fetchCoctails()
-            self.tableView.reloadData()
-        }
+    }
+    
+    private func setupTableView() {
+        tableView.rowHeight = 70
+        tableView.separatorStyle = .none
+        configureTableHeaderView()
     }
     
     private func setViews() {
@@ -53,7 +59,7 @@ final class FavoritesViewController: UITableViewController {
 extension FavoritesViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.cocktails.count
+        presenter?.cocktails.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,12 +81,70 @@ extension FavoritesViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension FavoritesViewController {
-    
-}
+//extension FavoritesViewController {
+//    
+////    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+////        50
+////    }
+//    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+////        let headerView = UIScrollView()
+//////        headerView.backgroundColor = .blue
+////
+////        let firstView = UIView()
+////        firstView.backgroundColor = .red
+////        firstView.layer.cornerRadius = 10
+////        headerView.addSubview(firstView)
+////
+////        firstView.snp.makeConstraints { make in
+////            make.top.equalToSuperview().offset(10)
+////            make.bottom.equalToSuperview().offset(-10)
+////            make.left.equalToSuperview().offset(20)
+////            make.width.equalTo(100)
+////        }
+////
+////
+////        let firstImageView = UIImageView()
+////        firstView.addSubview(firstImageView)
+////        firstImageView.contentMode = .scaleAspectFit
+////        firstImageView.image = UIImage(named: "vodka")
+////        firstImageView.snp.makeConstraints { make in
+////            make.centerY.equalToSuperview()
+////            make.left.equalToSuperview().offset(5)
+////            make.height.equalTo(20)
+////            make.width.equalTo(20)
+////        }
+////
+////        let firstTextLabel = UILabel()
+////        firstTextLabel.text = "Vodka"
+////        firstView.addSubview(firstTextLabel)
+////
+////        firstTextLabel.snp.makeConstraints { make in
+////            make.centerY.equalToSuperview()
+////            make.left.equalTo(firstImageView.snp.right).offset(5)
+////            make.right.equalToSuperview().offset(-5)
+////        }
+////
+////
+////
+////
+////        headerView.contentSize = CGSize(width: 100 * 4, height: 50)
+////
+////
+//////        let secondView = UIView()
+//////        let thirdView = UIView()
+//////        let fourtView = UIView()
+////
+////
+////
+////
+////        return headerView
+//    }
+//}
 
 // MARK: - FavoritesViewControllerProtocol
 extension FavoritesViewController: FavoritesViewControllerProtocol {
     func showCocktails() {
+        tableView.reloadData()
     }
 }

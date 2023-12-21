@@ -15,9 +15,7 @@ final class CocktailCell: UITableViewCell {
     
     // MARK: - Private UI Properties
     private lazy var mainView: UIView = {
-        var view = UIView()
-        view.backgroundColor = UIColor(red: 0.78, green: 0.93, blue: 0.93, alpha: 1.00)
-        view.layer.cornerRadius = 10
+        var view = UIView.makeMainView()
         return view
     }()
     
@@ -27,8 +25,7 @@ final class CocktailCell: UITableViewCell {
     }()
     
     private lazy var nameLabel: UILabel = {
-        var label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 17)
+        var label = UILabel.makeLabel(font: .boldSystemFont(ofSize: 17))
         return label
     }()
     

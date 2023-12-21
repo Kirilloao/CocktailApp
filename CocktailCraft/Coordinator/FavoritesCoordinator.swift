@@ -31,6 +31,4 @@ final class FavoriteCoordinator: FavoriteCoordinatorProtocol {
     
     func showDetails(with cocktail: Cocktail) {
     }
-    
-
 }
